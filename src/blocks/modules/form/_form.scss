@@ -1,0 +1,744 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 797px;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 8011;
+	background-color: $gray-f9;
+	overflow-y: auto;
+	transform: translateX(100%);
+	transition: 0.3s ease;
+
+	@include max(md) {
+		max-width: 100%;
+		height: 82.3vh;
+		bottom: 0;
+		top: unset;
+		transform: translateY(100%);
+	}
+
+	@include max(sm) {
+		height: 80vh;
+	}
+
+	&.open {
+		transform: translateX(0);
+
+		@include max(md) {
+			transform: translateY(0);
+		}
+	}
+	&.success{
+		overflow: hidden;
+	}
+
+	&__content {
+		padding: 42px 50px 38px;
+		flex-grow: 1;
+
+		@include max(md) {
+			padding: 25px 40px 38px 25px;
+		}
+
+		@include max(sm) {
+			padding: 10px 15px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		margin-bottom: 43px;
+
+		@include max(sm) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__title {
+		font-family: $titleFont;
+		font-size: 42px;
+		line-height: 54px;
+
+		@include max(md) {
+			text-transform: uppercase;
+		}
+
+		@include max(sm) {
+			font-size: 24px;
+			line-height: 25px;
+		}
+	}
+
+	input:not([type="submit"]),
+	textarea {
+		width: 100%;
+		border: 0;
+		padding: 20px 0;
+		background-color: transparent;
+		border-bottom: 1px solid rgba($black, 0.2);
+		font-size: 16px;
+		line-height: 20px;
+		transition: 0.3s ease;
+
+		@include max(sm) {
+			padding: 12px 0;
+			font-size: 9px;
+			line-height: 13px;
+		}
+
+		&::placeholder {
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+			color: rgba($black-40, 0.3);
+
+			@include max(sm) {
+				font-size: 9px;
+				line-height: 13px;
+			}
+		}
+
+		@include hover {
+			border-bottom-color: $black;
+		}
+
+		&:focus::placeholder {
+			opacity: 0;
+		}
+	}
+
+	input + input {
+		margin-top: 45px;
+
+		@include max(sm) {
+			margin-top: 22px;
+		}
+	}
+
+	textarea {
+		height: 237px;
+		margin-top: 18px;
+		resize: none;
+
+		&[name^="field_position"] {
+			height: 90px;
+		}
+
+		@include max(sm) {
+			height: 87px;
+		}
+	}
+
+	&__files {
+		display: flex;
+		align-items: center;
+		margin-top: 23px;
+		overflow-x: auto;
+		padding-bottom: 10px;
+
+		@include max(sm) {
+			margin-top: 14px;
+		}
+
+		&::-webkit-scrollbar {
+			height: 6px;
+			border-radius: 25px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba($black-40, 0.2);
+		}
+	}
+
+	&__files-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+		color: $gray-f9;
+		text-transform: uppercase;
+		background-color: $green;
+		padding: 11px 14px;
+		margin-right: 13px;
+
+		@include max(sm) {
+			font-size: 9px;
+			line-height: 13px;
+			padding: 7px;
+		}
+
+		&:first-child {
+			width: 1px;
+			height: 1px;
+			visibility: hidden;
+			pointer-events: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		span {
+			max-width: 120px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+
+	&__files-item-remove {
+		cursor: pointer;
+
+		svg {
+			stroke: $gray-f9;
+			width: 21px;
+			height: 12px;
+
+			@include max(sm) {
+				width: 13px;
+				height: 7px;
+			}
+		}
+	}
+
+	&__download {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 215px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border: 1px dashed rgba($black, 0.3);
+		margin-top: 10px;
+		cursor: pointer;
+		transition: 0.3s ease;
+
+		label, .description, summary {
+			display: none;
+		}
+
+		@include max(md) {
+			height: auto;
+			border: none;
+		}
+
+		@include hover {
+			border-color: $black;
+		}
+
+		input:not([type="submit"]) {
+			display: none;
+		}
+
+		.form-managed-file {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+	}
+
+
+
+	&__download-title {
+		text-transform: uppercase;
+		color: $black-40;
+
+		@include max(smd) {
+			display: none;
+		}
+	}
+
+	&__download-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		padding: 17px 41px;
+		background-color: $gray-d9;
+		text-transform: uppercase;
+		color: $black-40;
+		margin-top: 18px;
+		cursor: pointer;
+
+		@include max(md) {
+			width: 100%;
+			margin-top: 0;
+		}
+
+		@include max(sm) {
+			font-size: 9px;
+			line-height: 13px;
+			margin-top: 4px;
+		}
+
+		svg {
+			width: 24px;
+			height: 24px;
+
+			@include max(sm) {
+				width: 17px;
+				height: 17px;
+			}
+		}
+	}
+
+	&__submit {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 32px 10px !important;
+		background-color: $green !important;
+		text-transform: uppercase;
+		color: $white;
+		cursor: pointer;
+		transition: 0.3s ease;
+		max-width: inherit;
+		border-radius: inherit;
+
+		&.button {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		@include max(sm) {
+			font-size: 9px;
+			line-height: 13px;
+			padding: 15px 10px;
+		}
+
+		&:hover{
+			background: $colorBlue;
+			color: #ffffff;
+		}
+	}
+
+	&__close-btn{
+		z-index: 3;
+	}
+
+	&__success{
+		display: flex;
+		flex-direction: column;
+		background: #ffffff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&:not(.active){
+			display: none;
+		}
+		&-wrap{
+			padding: 42px 50px 38px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			@include max(md) {
+				padding: 25px 40px 38px 25px;
+			}
+			@include max(sm) {
+				padding: 10px 15px;
+			}
+		}
+		&-content {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			max-height: 523px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			&--col {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: center; 
+			}
+			
+		}
+		&-link {
+			font-family: 'SangBleu Empire';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 42px;
+			line-height: 54px;
+			text-align: center;
+			color: #15A6B1;
+			&--text {
+				position: relative;
+				width: 100%;
+				max-width: 291px;
+				margin-bottom: 24px;
+				font-family: 'Suisse Intl';
+				font-style: normal;
+				font-weight: 450;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: center;
+				color: #404040;				
+			}			
+		}
+		&-title{
+			font-family: $titleFont;
+			font-weight: 400;
+			font-size: 42px;
+			line-height: 1.28;
+			color: #404040;
+			text-align: center;
+			max-width: 650px;
+			@include max(sm) {
+				font-size: 24px;
+				max-width: 380px;
+			}
+		}
+		&-text{
+			font-weight: 450;
+			font-size: 16px;
+			line-height: 1.24;
+			text-align: center;
+			text-transform: uppercase;
+			color: #404040;
+			opacity: 0.3;
+			max-width: 333px;
+			margin-top: 32px;
+			@include max(sm) {
+				font-size: 14px;
+				max-width: 310px;
+			}
+		}
+	}
+
+
+
+
+
+	&__fileblock{
+		margin-top: 28px;
+		@include max(sm) {
+			margin-top: 14px;
+		}
+		summary,
+		.js-hide,
+		.tabledrag-toggle-weight-wrapper{
+			display: none;
+		}
+
+		a.tabledrag-handle {
+			display: none;
+		}
+
+		table thead{
+			display: none;
+		}
+
+		table,
+		table tbody{
+			display: block;
+		}
+		table tbody{
+			display: flex;
+			align-items: center;
+			overflow-x: auto;
+			padding-bottom: 28px;
+			@include max(sm) {
+				padding-bottom: 14px;
+			}
+			&::-webkit-scrollbar {
+				height: 6px;
+				border-radius: 25px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: rgba($black-40, 0.2);
+			}
+		}
+		div.js-form-managed-file[id^='edit-field-video'],
+		table tbody tr{
+			display: flex;
+			background-color: $green;
+			padding: 11px 14px;
+			margin-right: 13px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			align-items: center;
+			@include max(sm) {
+				font-size: 9px;
+				line-height: 13px;
+				padding: 7px;
+			}
+		}
+		div.js-form-managed-file[id^='edit-field-video']{
+			width: max-content;
+			margin-right: 0;
+		}
+		table tbody tr td{
+			display: flex;
+			align-items: center;
+		}
+		table tbody tr td img[data-drupal-selector^='edit-field-images']{
+			display: none;
+		}
+		table tbody tr td .file-size{
+			display: none;
+		}
+		div.js-form-managed-file[id^='edit-field-video'] .file,
+		table tbody tr td .file {
+			display: block;
+			min-height: 0;
+			padding-left: 0;
+			background: none;
+		}
+		div.js-form-managed-file[id^='edit-field-video'] .file a,
+		table tbody tr td .file a{
+			cursor: default;
+			pointer-events: none;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $gray-f9;
+			user-select: none;
+		}
+
+		div.js-form-managed-file[id^='edit-field-video'] input[name*="remove_button"],
+		table tbody tr td input[name*="remove_button"] {
+			cursor: pointer;
+			color: transparent;
+			font-size: 0;
+			width: 21px;
+			height: 12px;
+			border-radius: 0;
+			background: url("../img/svg/close2.svg") center center no-repeat;
+			background-size: contain;
+			display: block;
+			max-height: none;
+			margin-left: 13px;
+			padding: 0;
+			margin-top: 0;
+
+			@include max(sm) {
+				width: 13px;
+				height: 7px;
+			}
+		}
+
+		.description{
+			font-family: $mainFont;
+			font-style: normal;
+			font-weight: 450;
+			font-size: 14px;
+			line-height: 1.41;
+			color: #404040;
+			margin-bottom: 15px;
+			@include max(sm) {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+			span{
+				color: #15A6B1;
+			}
+		}
+
+		details {
+			margin: 0;
+			border: none;
+		}
+
+		.js-form-type-managed-file{
+			display: flex;
+			flex-direction: column-reverse;
+			flex-direction: column-reverse;
+		}
+
+		.js-form-type-managed-file > .js-form-managed-file.image-widget{
+			display: none;
+		}
+
+
+
+		label[id^=edit-field-images]{
+			display: flex;
+			justify-content: center;
+			padding: 20px 15px 15px;
+			font-size: 0;
+			color: transparent;
+			user-select: none;
+			width: 100%;
+			background: #D9D9D9;
+			cursor: pointer;
+			@include max(sm) {
+				padding: 15px 15px 10px;
+			}
+			&:hover{
+				background-color: #c7c7c7;
+			}
+			&::after{
+				content: "Выберите фото";
+				font-style: normal;
+				font-weight: 450;
+				font-size: 16px;
+				line-height: 1.24;
+				text-transform: uppercase;
+				display: block;
+				color: #404040;
+				padding-top: 2px;
+				@include max(sm) {
+					font-size: 9px;
+					line-height: 13px;
+				}
+			}
+			&::before{
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-right: 8px;
+				background: url("../img/svg/upload.svg") center center no-repeat;
+				background-size: contain;
+				@include max(sm) {
+					width: 17px;
+					height: 17px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+
+		div[id^="form-item-field-video-link"]{
+			display: none;
+		}
+
+
+		label[id^=edit-field-video]{
+			display: flex;
+			justify-content: center;
+			padding: 20px 15px 15px;
+			font-size: 0;
+			color: transparent;
+			user-select: none;
+			width: 100%;
+			background: #D9D9D9;
+			cursor: pointer;
+			@include max(sm) {
+				padding: 17px 15px 10px;
+			}
+			&:hover{
+				background-color: #c7c7c7;
+			}
+			&::after{
+				content: "Выберите видео";
+				font-style: normal;
+				font-weight: 450;
+				font-size: 16px;
+				line-height: 1.24;
+				text-transform: uppercase;
+				display: block;
+				color: #404040;
+				padding-top: 2px;
+				@include max(sm) {
+					font-size: 9px;
+					line-height: 13px;
+					padding-top: 1px;
+				}
+			}
+			&::before{
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-right: 8px;
+				background: url("../img/svg/upload.svg") center center no-repeat;
+				background-size: contain;
+				@include max(sm) {
+					width: 17px;
+					height: 17px;
+					margin-right: 5px;
+				}
+			}
+
+			&:nth-last-child(2){
+				display: none;
+			}
+		}
+
+		div.js-form-managed-file[id^='edit-field-video']:not(:last-child){
+			display: none;
+		}
+
+		&.error{
+			&::after{
+				content: "Обязательное поле";
+				color: red;
+				display: block;
+
+				width: 100%;
+				margin-top: 10px;
+				font-size: 18px;
+				line-height: 1.2;
+			}
+			label[id^=edit-field-images]{
+				outline: 2px solid red;
+			}
+		}
+	}
+}
+
+
+.file-loader{
+	height: 59px;
+	width: 100%;
+	position: relative;
+	background: #D9D9D9;
+	@include max(sm) {
+		height: 43px;
+	}
+	&__inner{
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: #15A6B1;
+		height: 100%;
+		z-index: 1;
+		transition: width 0.2s linear;
+	}
+	&__status{
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+		font-weight: 450;
+		font-size: 14px;
+		line-height: 1;
+		color: #15A6B1;
+		overflow: hidden;
+		white-space: nowrap;
+		display: flex;
+		align-items: center;
+		z-index: 2;
+		position: absolute;
+		transition: mask-image 0.2s linear;
+		&--white{
+			color: #F9F9F9;
+		}
+	}
+}
+

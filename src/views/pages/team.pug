@@ -1,0 +1,411 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Команда"
+block head
+	include ../../blocks/modules/header/header
+block content
+	.team__section.section.section--start.section--bg2
+		.team__bg 
+				img(src="img/news__bg--2.png", alt="")
+		.container
+			.team
+				.team__col
+					.team__picture.team__picture--desc 
+						picture
+							source(media="(max-width: 992px)", srcset="img/team__picture.png")
+							img(src="img/team__picture.png", alt="")
+				.team__col
+					.team__top
+						.team__title.title__44--md
+							!="Наталья касаткина <br>и Ирина Алешина"
+						.team__subtitle.team__subtitle--desc
+							.team__subtitle__text.text__16 Управляющие партнеры Horwitz
+					
+					.team__line.line
+					.team__desc__wrap.team__desc__wrap--desc
+						.team__desc
+							.team__desc__col
+								.team__desc__text.text__14
+									!="Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, инициированные исключительно синтетически, превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Принимая во внимание показатели успешности, понимание сути ресурсос."
+							.team__desc__col
+								.team__desc__text.text__14
+									!="Сложно сказать, почему тщательные исследования конкурентов набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям! Равным образом, повышение уровня гражданского сознания не оставляет шанса для своевременного выполнения сверхзадачи. Таким образом, граница обучения кадров."
+			
+					.team__desc__wrap.team__desc__wrap--mob
+						.team__desc__wrap__col
+							.team__picture 
+								picture
+									source(media="(max-width: 992px)", srcset="img/team__picture.png")
+									img(src="img/team__picture.png", alt="")
+						.team__desc__wrap__col
+							.team__desc
+								.team__desc__col
+									.team__desc__text.text__14
+										!="Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, инициированные исключительно синтетически, превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Принимая во внимание показатели успешности, понимание сути ресурсос."
+								.team__desc__col
+									.team__desc__text.text__14
+										!="Сложно сказать, почему тщательные исследования конкурентов набирают популярность среди определенных слоев населения, а значит, должны быть ассоциативно распределены по отраслям! Равным образом, повышение уровня гражданского сознания не оставляет шанса для своевременного выполнения сверхзадачи. Таким образом, граница обучения кадров."
+					.team__subtitle.team__subtitle--mob
+						.team__subtitle__text.text__14
+							!="Управляющие <br> партнеры Horwitz"
+		
+		.team-list__wrap
+			.container
+				.team-list
+					.team-list__num.num.text__16 /01
+					.team-list__title.title__44--md
+						!="Команда horwitz"
+					.team-list__line.line
+					.team-list__slider__wrap
+						.swiper-container.team-list__slider.js-team-list
+							.swiper-wrapper
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__2.png")
+														img(src="img/team-list__item__picture__2.png", alt="")
+										.team-list__item__name.text__16 Роман Пителин
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`									
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__1.png")
+														img(src="img/team-list__item__picture__1.png", alt="")
+										.team-list__item__name.text__16 Екатерина Варавенко
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__3.png")
+														img(src="img/team-list__item__picture__3.png", alt="")
+										.team-list__item__name.text__16 Максим Масноваев
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__4.png")
+														img(src="img/team-list__item__picture__4.png", alt="")
+										.team-list__item__name.text__16 Юлия Мыслева
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__2.png")
+														img(src="img/team-list__item__picture__2.png", alt="")
+										.team-list__item__name.text__16 Роман Пителин
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__1.png")
+														img(src="img/team-list__item__picture__1.png", alt="")
+										.team-list__item__name.text__16 Екатерина Варавенко
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__3.png")
+														img(src="img/team-list__item__picture__3.png", alt="")
+										.team-list__item__name.text__16 Максим Масноваев
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+								.team-list__slide.swiper-slide
+									.team-list__item
+										.team-list__item__top
+											.team-list__item__top__col
+												.team-list__item__btn 
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+														<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												.team-list__item__post.text__14
+													!="Управляющий объектом"
+											.team-list__item__top__col
+												.team-list__item__picture 
+													picture 
+														source(media="(max-width: 992px)", srcset="img/team-list__item__picture__4.png")
+														img(src="img/team-list__item__picture__4.png", alt="")
+										.team-list__item__name.text__16 Юлия Мыслева
+										.team-list__item__text.text__14 
+											!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+
+							.swiper-buttons
+								.swiper-button-prev
+									<svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.4447 9L0.954102 9L19.4447 9Z" fill="#0D0D0D"/>
+									<path d="M19.4447 9L0.954102 9" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M0.786133 8.89283L9.12578 1" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								.swiper-button-next
+									<svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.12755 9L19.6182 9L1.12755 9Z" fill="#0D0D0D"/>
+									<path d="M1.12755 9L19.6182 9" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M19.7861 8.89283L11.4465 1" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+					
+					.team-list__mob-list
+								
+						.team-list__item.active
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__2.png")
+											img(src="img/team-list__item__picture__2.png", alt="")
+							.team-list__item__name.text__16 Роман Пителин
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`									
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__1.png")
+											img(src="img/team-list__item__picture__1.png", alt="")
+							.team-list__item__name.text__16 Екатерина Варавенко
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__3.png")
+											img(src="img/team-list__item__picture__3.png", alt="")
+							.team-list__item__name.text__16 Максим Масноваев
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__4.png")
+											img(src="img/team-list__item__picture__4.png", alt="")
+							.team-list__item__name.text__16 Юлия Мыслева
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__2.png")
+											img(src="img/team-list__item__picture__2.png", alt="")
+							.team-list__item__name.text__16 Роман Пителин
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+					
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__1.png")
+											img(src="img/team-list__item__picture__1.png", alt="")
+							.team-list__item__name.text__16 Екатерина Варавенко
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__3.png")
+											img(src="img/team-list__item__picture__3.png", alt="")
+							.team-list__item__name.text__16 Максим Масноваев
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+					
+						.team-list__item
+							.team-list__item__top
+								.team-list__item__top__col
+									.team-list__item__btn 
+										<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.994891 4.63531L11.7109 16.3164L0.994891 4.63531Z" fill="#0D0D0D"/>
+											<path d="M0.994891 4.63531L11.7109 16.3164" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11.881 16.3633L12.034 6.52065" stroke="#F8F5EF" stroke-width="0.905821" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									.team-list__item__post.text__14
+										!="Управляющий объектом"
+								.team-list__item__top__col
+									.team-list__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/team-list__item__picture__4.png")
+											img(src="img/team-list__item__picture__4.png", alt="")
+							.team-list__item__name.text__16 Юлия Мыслева
+							.team-list__item__text.text__14 
+								!=`“Но предприниматели в сети интернет остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями.“`	
+
+		.container
+			.team-foto__picture
+				picture 
+					source(media="(max-width: 992px)", srcset="img/team-foto__picture.png")
+					img(src="img/team-foto__picture.png", alt="")
+	include ../../blocks/modules/footer/footer
+block scripts
+	script
+		| var nextPage = 'page2.html';
+		| var nextPageBg = '#003F78';

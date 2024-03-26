@@ -1,0 +1,271 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Новости"
+	- var sidebarActive = 1940
+block head
+	include ../../blocks/modules/header/header
+block content
+	.news-page
+		.news.section.section--start.section--bg2
+			.news__bg 
+				img(src="img/news__bg--2.png", alt="")
+			.container
+				.news__top
+					.news__title.title__44--md
+						!="Новости Horwitz"
+				.news__line.line
+				.news__list--trio
+					.news__list__col
+						a(href="#").news__item.news__item--big
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+									img(src="img/news__item__picture__1.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+				
+				.news__list--quartet
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ "
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+				.news__list--trio.news__list--trio--revers
+					.news__list__col
+						a(href="#").news__item.news__item--big
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+									img(src="img/news__item__picture__1.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+				.news__list--quartet
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__2.png")
+									img(src="img/news__item__picture__2.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="КОМПЛЕКС ОБЪЕКТОВ В РЕЗИДЕНЦИИ БЕНИЛЮКС В ЭКСПЛУАТАЦИИ HORWITZ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ "
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+					.news__list__col
+						a(href="#").news__item
+							.news__item__picture 
+								picture 
+									source(media="(max-width: 992px)", srcset="img/news__item__picture__3.png")
+									img(src="img/news__item__picture__3.png", alt="")
+							.news__item__date.text__14 02/08/2023
+							.news__item__title.text__16
+								!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ  — <br> ЖК САДОВЫЕ КВАРТАЛЫ"
+							.news__item__btn.btn
+								!="узнать ПОДРОБНЕЕ"
+								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+								<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								.btn__line
+
+	include ../../blocks/modules/footer/footer
+block scripts
+	script
+		| var nextPage = 'page2.html';
+		| var nextPageBg = '#003F78';

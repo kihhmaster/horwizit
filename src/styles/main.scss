@@ -1,0 +1,42 @@
+// Переменные, миксины, функции
+@use 'sass:math';
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+@import '../../node_modules/swiper/swiper-bundle';
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+
+// Основное
+//@import "modules/pager";
+@import "modules/tabs";
+@import "modules/messages";
+@import "modules/breadcrumb";
+@import "modules/details";
+@import "modules/file";
+@import "modules/progress";
+//@import "modules/exposed-filters";
+//@import "modules/tabledrag";
+//@import "modules/tableselect";
+//@import "modules/tablesort";
+//@import "modules/ui-dialog";
+
+// БЭМ-блоки
+@import "../blocks/modules/modules";
+
+
+// Стили целых страниц без разбития на модули
+@import "pages/home_page";
+@import "pages/news";
+@import "pages/news-single";
+@import "pages/team";
+@import "pages/services";
+@import "pages/projects-page";
+@import "pages/projects-single";
+@import "pages/404";

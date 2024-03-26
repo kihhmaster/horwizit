@@ -1,0 +1,163 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Новость"
+	- var sidebarActive = 1940
+block head
+	include ../../blocks/modules/header/header
+block content
+	.news-single
+		.news.section.section--start.section--bg2
+			.news__bg 
+				img(src="img/news__bg--2.png", alt="")
+			.container
+				.news__top
+					.news__title.title__44--md
+						!="НОВЫЙ ПРОЕКТ КОМПАНИИ HORWITZ – ЖК САДОВЫЕ КВАРТАЛЫ"
+					.news__subtitle
+						.news__subtitle__text.text__14 Новые объекты
+						.news__subtitle__date.text__14 01/08/2023
+				.news__line.line
+				.news-single__item__wrap
+					.news-single__item__picture
+						img(src="img/control__picture.png", alt="")
+					.news-single__item
+						.news-single__item__col
+							.news-single__item__text.text__14
+								!="Вот вам яркий пример современных тенденций — разбавленное изрядной долей эмпатии, рациональное мышление способствует подготовке и реализации форм воздействия. Для современного мира экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса позиций, занимаемых участниками в отношении поставленных задач."
+							
+						.news-single__item__col
+							.news-single__item__text.text__14
+								!="Вот вам яркий пример современных тенденций — разбавленное изрядной долей эмпатии, рациональное мышление способствует подготовке и реализации форм воздействия. Для современного мира экономическая повестка сегодняшнего дня создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса позиций, занимаемых участниками в отношении поставленных задач."
+		.news-recommended__wrap.section--bg2
+			.container
+				.news-recommended
+					.news-recommended__num.num.text__16 /01
+					.news-recommended__title.title__44--md
+						!="Читать другие новости"
+					.news-recommended__line.line
+					.swiper-container.news-recommended__slider.js-news-recommended
+						.swiper-wrapper
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+							.news-recommended__slide.swiper-slide
+								a(href="#").news__item.news__item--big
+									.news__item__picture 
+										picture 
+											source(media="(max-width: 992px)", srcset="img/news__item__picture__1.png")
+											img(src="img/news__item__picture__1.png", alt="")
+									.news__item__date.text__14 02/08/2023
+									.news__item__title.text__16
+										!="КОМПАНИЯ ХОВРИЦ  ПОЛУЧИЛА СТАТУС ГАРАНТИРУЮЩЕГО ПОСТАВЩИКА"
+									.news__item__btn.btn
+										!="узнать ПОДРОБНЕЕ"
+										<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.00003 5.78223L10.5713 5.78223L1.00003 5.78223Z" fill="#0D0D0D"/>
+										<path d="M1.00003 5.78223L10.5713 5.78223" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M10.6592 5.7208L6.34235 1.2168" stroke="#F8F5EF" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+										.btn__line
+					
+						.swiper-buttons
+							.swiper-button-prev
+								<svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M19.4447 9L0.954102 9L19.4447 9Z" fill="#0D0D0D"/>
+								<path d="M19.4447 9L0.954102 9" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M0.786133 8.89283L9.12578 1" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							.swiper-button-next
+								<svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.12755 9L19.6182 9L1.12755 9Z" fill="#0D0D0D"/>
+								<path d="M1.12755 9L19.6182 9" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M19.7861 8.89283L11.4465 1" stroke="#F8F5EF" stroke-width="1.05661" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+				
+	include ../../blocks/modules/footer/footer
+block scripts
+	script
+		| var nextPage = 'page2.html';
+		| var nextPageBg = '#003F78';
