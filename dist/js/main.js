@@ -502,10 +502,39 @@ gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_MotionPathPlugi
 gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 swiper__WEBPACK_IMPORTED_MODULE_6__.Swiper.use([swiper__WEBPACK_IMPORTED_MODULE_6__.Parallax, swiper__WEBPACK_IMPORTED_MODULE_6__.Mousewheel, swiper__WEBPACK_IMPORTED_MODULE_6__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_6__.Scrollbar, swiper__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_6__.Controller, swiper__WEBPACK_IMPORTED_MODULE_6__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_6__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_6__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_6__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_6__.EffectCoverflow, swiper__WEBPACK_IMPORTED_MODULE_6__.EffectCards]); //прелоадер project-preloader 
+// function animationPreloader(){
+// 	console.log("animationPreloader")
+// 	$(".js-project-preloader").on("click", function(e) {
+// 		var arrayData = this.getAttribute('data-img');
+// 		var arr = arrayData.split(';');
+// 		$( ".project-preloader__picture" ).each(function(index) {
+// 			$( this ).css('background-image', 'url(' + arr[index] + ')');
+// 		});
+// 		$(".project-preloader").addClass("active")
+// 		$.each($('.project-preloader__picture'), function(i, el) {
+// 			setTimeout(function() {
+// 				$(el).addClass("active");
+// 			}, 50 + (i * 1500));
+// 			setTimeout(function() {
+// 				$(".project-preloader").addClass("no-active")
+// 			}, 5800);
+// 			setTimeout(function() {
+// 				$(".project-preloader").removeClass("active")
+// 				$(".project-preloader").removeClass("no-active")
+// 				$(el).removeClass("active");
+// 			}, 6500);
+// 		});
+// 	})
+// }
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-project-preloader").on("click", function (e) {
   e.preventDefault();
-  console.log("project-preloader");
+  var arrayData = this.getAttribute('data-img');
+  var href = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+  var arr = arrayData.split(';');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".project-preloader__picture").each(function (index) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('background-image', 'url(' + arr[index] + ')');
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".project-preloader").addClass("active");
   jquery__WEBPACK_IMPORTED_MODULE_0___default().each(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.project-preloader__picture'), function (i, el) {
     setTimeout(function () {
@@ -519,25 +548,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-project-preloader").on("click
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(".project-preloader").removeClass("no-active");
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(el).removeClass("active");
     }, 6500);
+    setTimeout(function () {
+      window.location.href = href;
+    }, 6450);
   });
-}); // function projectPreloader() {
-// 	$(".project-preloader").addClass("active")
-// 	$.each($('.project-preloader__picture'), function(i, el) {
-// 		setTimeout(function() {
-// 			$(el).addClass("active");
-// 		}, 50 + (i * 1500));
-// 		setTimeout(function() {
-// 			$(".project-preloader").addClass("no-active")
-// 		}, 5800);
-// 		setTimeout(function() {
-// 			$(".project-preloader").removeClass("active")
-// 			$(".project-preloader").removeClass("no-active")
-// 			$(el).removeClass("active");
-// 		}, 6500);
-// 	});
-// }
-//прелоадер project-preloader
-
+});
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.contacts__form__input').on('input', function (e) {
   var state = e.target.value;
 
@@ -742,8 +757,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-team-list').each(function () 
     // watchSlidesProgress: true,
     // preventInteractionOnTransition: true,
     spaceBetween: 10,
-    loop: true,
+    loop: false,
     slidesPerView: 4.1,
+    centeredSlides: true,
+    initialSlide: 2,
     // slidesPerView: "auto",
     navigation: {
       nextEl: slider.find('.swiper-button-next')[0],
@@ -888,7 +905,7 @@ var projectsPageListSlider = new swiper__WEBPACK_IMPORTED_MODULE_6__.Swiper(".js
 var projectsPageListFotoSlider = new swiper__WEBPACK_IMPORTED_MODULE_6__.Swiper(".js-projects-page__list-foto", {
   direction: "horizontal",
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 2,
   loop: false,
   pagination: true,
   mousewheel: true,
