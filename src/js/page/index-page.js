@@ -52,19 +52,20 @@ $(".js-project-preloader").on("click", function(e) {
 		setTimeout(function() {
 			$(el).addClass("active");
 		}, 50 + (i * 1500));
-		setTimeout(function() {
-			$(".project-preloader").addClass("no-active")
-		}, 5800);
-		setTimeout(function() {
-			$(".project-preloader").removeClass("active")
-			$(".project-preloader").removeClass("no-active")
-			$(el).removeClass("active");
-		}, 6500);
-		setTimeout(function() {
-			window.location.href = href;
-		}, 6450);
+		// setTimeout(function() {
+		// 	$(".project-preloader").addClass("no-active")
+		// }, 5800);
+		// setTimeout(function() {
+		// 	$(".project-preloader").removeClass("active")
+		// 	$(".project-preloader").removeClass("no-active")
+		// 	$(el).removeClass("active");
+		// }, 6500);
+
 
 	});
+	setTimeout(function() {
+		window.location.href = href;
+	}, 6450);
 })
 
 
@@ -138,11 +139,11 @@ overlayBg.addEventListener("click", function () {
   humb.classList.remove("is-active");
   bodyYesScroll()
 });
-humb.addEventListener("mousemove", function () {
+humb.addEventListener("click", function () {
   mobMenuSection.classList.add("active");
   bodyNoScroll()
 });
-humb.addEventListener("mousemove", function () {
+humb.addEventListener("click", function () {
   mobMenuSection.classList.add("active");
   bodyNoScroll()
 });
@@ -281,9 +282,9 @@ $('.js-team-list').each(function(){
 		// preventInteractionOnTransition: true,
 		spaceBetween: 10,
 		loop: false,
-		slidesPerView: 4.1,
+		slidesPerView: 3.1,
 		centeredSlides: true,
-		initialSlide: 2,
+		initialSlide: 3,
 		// slidesPerView: "auto",
 		navigation: {
 			nextEl: slider.find('.swiper-button-next')[0],
@@ -303,7 +304,9 @@ $('.js-team-list').each(function(){
 				// when window width is >= 480px
 				1100: {
 						slidesPerView: 5,
-						spaceBetween: 0
+						spaceBetween: 0,
+						initialSlide: 3,
+						centeredSlides: true,
 				},
 		}
 	});
@@ -519,7 +522,7 @@ tabAllClick(tabNavs, tabPanes);
 ///tabs
 
 var initMode;
-let addTime = 1200;
+let addTime = 1800;
 let addTime2 = 100;
 
 let st1, st2, st3;
@@ -543,6 +546,7 @@ function initAnimation(){
 	b4Height =  $('.services').innerHeight();
 	b5Height =  $('.projects').innerHeight();
 	b6Height =  $('.news').innerHeight();
+	b7Height =  $('.information').innerHeight();
 	scHeight =  $('.home-page').innerHeight();
 	// b1Height =  $('.section3__block--1').innerHeight();
 
@@ -608,6 +612,7 @@ function initScrollAnimationDesktop(){
 		onComplete: function () {
 			console.log ("js-start__slider")
 			$('.start__slider').addClass('active');
+			$('.header').removeClass('active');
 		},
 		// OnStart: function () {
 		// 	console.log ("removeClass")
@@ -616,6 +621,7 @@ function initScrollAnimationDesktop(){
 		onReverseComplete: function () {
 			console.log ("removeClass")
 			$('.start__slider').removeClass('active');
+			$('.header').removeClass('active');
 		},
 		// onUpdate: function () {
 		// 	console.log ("removeClass")
@@ -655,7 +661,7 @@ function initScrollAnimationDesktop(){
 		ease: "none",
 		onStart: function () {
 			// console.log ("header")
-			// $('.header').addClass('active');
+			$('.header').addClass('active');
 			// $('.start__slider').removeClass('active');
 		},
 		// onComplete: function () {
@@ -830,6 +836,31 @@ function initScrollAnimationDesktop(){
 		duration: Math.abs((scHeight - b6Height) / 460) + 1,
 		ease: "none",
 	}, ">");
+	tl1.fromTo(".information", {
+		left: "-120%",
+	},
+ {
+		left: "0",
+		duration:  1.5,
+		ease: "none",
+	} , ">+=0.1");
+	tl1.fromTo(".information__line", {
+		x: '-120%',
+	}, {
+		x: '0%',
+		duration: 2,
+		ease: "none",
+	}, "<-=0.3");
+	tl1.fromTo(".information", {
+		y: "0",
+		top: "0"
+	}, {
+		top: "0",
+		// y: "0",
+		y: -1 * (b7Height - scHeight),
+		duration: Math.abs((scHeight - b7Height) / 460) + 1,
+		ease: "none",
+	}, ">");
 
 	tl1.fromTo(".footer__wrap", {
 		y: "0",
@@ -840,7 +871,7 @@ function initScrollAnimationDesktop(){
 		y: -1 * (b2Height - scHeight),
 		duration: Math.abs((scHeight - b2Height) / 460) + 1,
 		ease: "none",
-	}, ">+=0.5");
+	}, ">+=0");
 
 	tl1.fromTo(".footer__content__picture", {
 		x: '-120%',

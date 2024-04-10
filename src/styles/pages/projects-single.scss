@@ -432,19 +432,27 @@
 				justify-content: space-between;
 				padding-top: vw(30);
 				border-top: 1px solid rgba(248, 245, 239, 0.2);
+				margin-bottom: vw(90);
+				@include max(md) {
+					margin-bottom: vw2(75);
+				}
 				@include max(sm) {
 					flex-flow: column nowrap;
 					border-top: none;
+					margin-bottom: vw3(50);
 				}
-				&:first-child {
-					margin-bottom: vw(90);
-					@include max(md) {
-						margin-bottom: vw2(75);
-					}
-					@include max(sm) {
-						margin-bottom: vw3(50);
-					}
+				&::last-child {
+					margin-bottom: 0;
 				}
+				// &:first-child {
+				// 	margin-bottom: vw(90);
+				// 	@include max(md) {
+				// 		margin-bottom: vw2(75);
+				// 	}
+				// 	@include max(sm) {
+				// 		margin-bottom: vw3(50);
+				// 	}
+				// }
 			}
 
 		}
@@ -546,6 +554,7 @@
 				}
 			}
 		}
+
 	}
 }
 .projects-single-foto {

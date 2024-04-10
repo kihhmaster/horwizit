@@ -395,7 +395,7 @@
 			top: vw3(15);
 			width: vw3(30);
 			height: vw3(30);
-			background: $bg1;
+			background: $bg2;
 		}
 		svg {
 			display: block;
@@ -522,6 +522,7 @@
 				height: vw(878);
 			}
 			&--bg {
+				margin-top: vw(91);
 				@include max(md) {
 					display: none;
 				}
@@ -606,7 +607,7 @@
 							padding-top: 57.25%;
 						}
 						@include max(sm) {
-							padding-top: 76.67%;
+							padding-top: 56.67%;
 						}
 				}
 				picture, img {

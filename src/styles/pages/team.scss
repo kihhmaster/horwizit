@@ -21,6 +21,13 @@
 		flex-flow: column nowrap;
 		width: 100%;
 		overflow: hidden;
+		padding-top: vw(150) !important;
+		@include max(md) {
+			padding-top: vw2(231) !important;
+		}
+		@include max(sm) {
+			padding-top: vw3(154) !important;
+		}
 	}
 	&__col {
 		position: relative;
@@ -29,7 +36,7 @@
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		&:nth-child(1) {
-			width: vw(532);
+			width: vw(632);
 			padding-right: vw(40);
 			@include max(md) {
 				display: none;
@@ -38,7 +45,7 @@
 		&:nth-child(2) {
 			justify-content: flex-end;
 			align-items: flex-end;
-			width: calc(100% - vw(532));
+			width: calc(100% - vw(632));
 			@include max(md) {
 				width: 100%;
 			}
@@ -221,7 +228,7 @@
 					width: calc(100% - vw2(426));
 					@include max(sm) {
 						width: 100%;
-						padding-left: vw3(79);
+						padding-left: vw3(83);
 					}
 
 				}
@@ -300,7 +307,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		width: 100%;
-		max-width: vw(1520);
+		max-width: vw(1190);
 		margin-bottom: vw(50);
 		text-transform: uppercase;
 		@include max(md) {
@@ -361,7 +368,11 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			width: 100%;
-			padding-left: vw(309);
+			padding-left: vw(335);
+			@include max(md) {
+				padding-left: vw2(140);
+				
+			}
 			@include max(sm) {
 				display: none;
 				
@@ -454,7 +465,8 @@
 		flex-flow: column nowrap;
 		padding-left: vw(20);
 		@include max(md) {
-			padding-left: vw2(10);
+			// padding-left: vw2(10);
+			padding-left: vw2(0);
 		}
 		&.swiper-slide-active {
 			// transition: all 0.1s;

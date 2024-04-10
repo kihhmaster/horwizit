@@ -104,6 +104,15 @@ img{
 			padding-top: vw3(154) !important;
 		}
 	}
+	&--last {
+		margin-bottom: vw(250);
+		@include max(md) {
+			margin-bottom: vw2(200);
+		}
+		@include max(sm) {
+			margin-bottom: vw3(140);
+		}
+	}
 	&--bg1 {
 		background: #0E1214;
 	}
@@ -390,8 +399,8 @@ img{
 .text__16 {
 	color: rgb(248, 245, 239);
 	font-size: vw(16);
-	font-weight: 600;
-	line-height: vw(19);
+	font-weight: 500;
+	line-height: 119%;
 	letter-spacing: 0%;
 	@include max(md) {
 		font-size: vw2(16);
@@ -405,7 +414,7 @@ img{
 .text__14 {
 	color: rgba(248, 245, 239, 0.8);
 	font-size: vw(14);
-	font-weight: 600;
+	font-weight: 500;
 	line-height: vw(17);
 	letter-spacing: 0%;
 	@include max(md) {
@@ -623,11 +632,14 @@ img{
 			position: relative;
 			display: flex;
 			align-self: center;
+			width: vw(130);
+			height: 85%;
+			margin-top: vw(50);
 			svg {
 				position: relative;
 				display: block;
 				width: vw(130);
-				height: vw(878);
+				height: 100%;
 			}
 			&--bg {
 				@include max(md) {
@@ -1011,7 +1023,7 @@ img{
 			margin-bottom: vw2(0);
 		}
 		@include max(sm) {
-			// max-width: vw3(316);
+			max-width: vw3(316);
 			margin-bottom: vw3(0);
 		}
 		&__col {
@@ -1259,7 +1271,7 @@ img{
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		@include max(md) {
-			padding-left: vw2(181);
+			padding-left: vw2(186);
 		}
 		@include max(sm) {
 			padding-left: vw3(58);
@@ -1362,15 +1374,23 @@ img{
 		}
 
 		&__title {
+			text-transform: uppercase;
+			max-width: vw(332);
+			font-weight: 600;
+			font-size: vw(24);
+			line-height: 100%;
+			text-transform: uppercase;
 			@include max(md) {
 				font-size: vw2(16);
 				font-weight: 600;
-				line-height: vw2(18);
+				line-height: 112%;
+				max-width: vw2(332);
 			}
 			@include max(sm) {
 				font-size: vw3(14);
 				font-weight: 600;
-				line-height: vw3(16);
+				line-height: 114%;
+				max-width: 100%;
 			}
 		}
 		.num {
@@ -1411,6 +1431,14 @@ img{
 				}
 				@include max(sm) {
 					flex-flow: column nowrap;
+				}
+				&:nth-child(2) {
+					@include max(md) {
+						margin-top: vw2(-277);
+					}
+					@include max(sm) {
+						margin-top: 0;
+					}
 				}
 				.service {
 					margin-right: vw(20);
@@ -1586,6 +1614,7 @@ img{
 			position: absolute;
 			top: vw(105);
 			left: vw(20);
+			text-transform: uppercase;
 			@include max(md) {
 				position: relative;
 				top:auto;
@@ -1662,11 +1691,11 @@ img{
 				display: flex;
 				justify-content: flex-start;
 				width: 100%;
-				max-width: vw2(653);
+				max-width: vw2(660);
 				margin-right: vw2(-10);
 			}
 			@include max(sm) {
-				max-width: vw3(316);
+				max-width: vw3(324);
 				width: calc(100% + vw3(10));
 				margin-right: vw3(-10);
 			}
@@ -1774,7 +1803,7 @@ img{
 	&__slide {
 			position: relative;
 			display: flex;
-			justify-content: flex-start;
+			justify-content: flex-end;
 			align-items: flex-start;
 			width: 100%;
 			height: 100%;
@@ -1786,7 +1815,9 @@ img{
 			@include max(md) {
 				height: 100%;
 			}
-
+		.project {
+			height: 100%;
+		}
 
 
 	}
@@ -2026,7 +2057,7 @@ img{
 		max-width: vw(1030);
 		text-transform: uppercase;
 		@include max(md) {
-			max-width: vw2(525);
+			max-width: vw2(530);
 			// br {
 			// 	display: none;
 			// }
@@ -2161,7 +2192,7 @@ img{
 		margin-left: vw(-20);
 		padding-bottom: 0px;
 		@include max(md) {
-			max-width: vw2(653);
+			max-width: vw2(660);
 			width: calc(100% + vw2(10));
 			margin-left: vw2(-10);
 		}
@@ -2377,6 +2408,261 @@ img{
 				margin-top: vw3(30);
 			}
 		}
+	}
+
+}
+.information {
+	position: absolute;
+	top: 0%;
+	left: -120%;
+	z-index: 75;
+	align-items: flex-end;
+	padding-top: vw(133);
+	@include max(md) {
+		position: relative;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 20;
+		height: auto;
+		min-height: auto;
+	}
+	&__bg {
+		position: absolute;
+		bottom: vw(50);
+		right: vw(0);
+		width: vw(1427);
+		height: vw(1432);
+		transform: rotate(-0deg);
+		@include max(md) {
+			display: none;
+		}
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: bottom right;
+		}
+	}
+	&__top {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		flex-flow: row nowrap;
+		width: 100%;
+		margin-bottom: vw(50);
+		@include max(md) {
+			margin-bottom: vw2(30);
+		}
+		@include max(sm) {
+			margin-bottom: vw3(30);
+		}
+	}
+	&__title {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		max-width: vw(1055);
+		text-transform: uppercase;
+		@include max(md) {
+			max-width: vw2(525);
+			// br {
+			// 	display: none;
+			// }
+		}
+		@include max(sm) {
+			max-width: vw3(316);
+		}
+	}
+	&__num {
+		top: 0;
+		left: 0;
+	}
+	&__line {
+		margin-bottom: vw(80);
+		@include max(md) {
+			margin-bottom: vw2(32);
+		}
+		@include max(sm) {
+			margin-bottom: vw3(32);
+		}
+	}
+
+	&__btn {
+		@include max(md) {
+			margin-bottom: vw2(3);
+		}
+		&--desc{
+			@include max(sm) {
+				display: none;
+			}
+		}
+		&--mob{
+			display: none;
+			@include max(sm) {
+				display: flex;
+				align-self: flex-end;
+				margin-top: vw3(30);
+			}
+		}
+	}
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		&__col {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			&:nth-child(1) {
+				width: vw(582);
+				margin-right: vw(71);
+				@include max(md) {
+					width: vw2(178);
+					margin-right: vw(27);
+				}
+				@include max(sm) {
+					display: none;
+				}
+			}
+			&:nth-child(2) {
+				width: calc(100% - vw(582));
+				@include max(md) {
+					width: calc(100% - vw2(178));
+				}
+				@include max(sm) {
+					width: 100%;
+				}
+			}
+		}
+		&__picture  {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			height: 100%;
+			&::before {
+					position: relative;
+					content: "";
+					width: 100%;
+					padding-top: 82.50%;
+					@include max(md) {
+						padding-top: 89.52%;
+					}
+			}
+			picture, img {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: top center;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					// width: 100%;
+			}
+		}	
+	}
+	&__list {
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		&__item {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: vw(20);
+			margin-bottom: vw(24);
+			border-bottom: 1px solid rgba(248, 245, 239, 0.2);
+			padding-left: vw(94);
+			width: 100%;
+			transition: all 0.3s;
+			text-decoration: none;
+			@include max(md) {
+				padding-left: vw2(94);
+				padding-bottom: vw2(15);
+				margin-bottom: vw2(18);
+			}
+			@include max(sm) {
+				padding-left: vw3(56);
+				padding-bottom: vw3(15);
+				margin-bottom: vw3(18);
+			}
+			&:hover {
+				transition: all 0.3s;
+				.information__list__item__text {
+					color: rgba(248, 245, 239, 0.4);
+					transition: all 0.3s;
+				}
+			}
+			&__num {
+				top: 0;
+				left: 0;
+				color: rgba(248, 245, 239, 0.6);
+				@include max(md) {
+					font-size: vw2(12);
+					line-height: 125%;
+				}
+				@include max(sm) {
+					font-size: vw3(12);
+					line-height: 125%;
+				}
+			}
+			&__text {
+				text-transform: uppercase;
+				max-width: vw(548);
+				transition: all 0.3s;
+				@include max(md) {
+					max-width: vw2(548);
+					font-size: vw2(14);
+					line-height: 121%;
+				}
+				@include max(sm) {
+					max-width: vw3(270);
+					font-size: vw3(12);
+					line-height: 125%;
+				}
+			}
+			&__row {
+				svg {
+					position: relative;
+					display: block;
+					width: vw(17);
+					height: vw(18);
+					margin-left: vw(8);
+					margin-bottom: vw(5);
+					margin-right: 0;
+					@include max(md) {
+						width: vw2(12);
+						height: auto;
+						margin-bottom: vw2(3);
+						margin-left: vw2(8);
+					}
+					@include max(sm) {
+						width: vw3(12);
+						height: auto;
+						margin-bottom: vw3(3);
+						margin-left: vw3(8);
+					}
+				}
+			}
+		}
+
 	}
 
 }
@@ -2674,6 +2960,15 @@ img{
 				@include max(sm) {
 					display: flex;
 				}
+			}
+		}
+		&__bottom {
+			margin-top: vw(21);
+			@include max(md) {
+				margin-top: vw2(31);
+			}
+			@include max(sm) {
+				margin-top: vw3(31);
 			}
 		}
 	}

@@ -19,7 +19,7 @@
 		padding-bottom: vw2(20);
 		padding-left: vw2(30);
 		padding-right: vw2(30);
-		background: #080A0B;
+		background: #0E1214;
 	}
 	@include max(sm){
 		min-height: auto;
@@ -29,7 +29,7 @@
 		padding-right: vw3(10);
 	}
 	&.active {
-		background: #080A0B;
+		background: #0E1214;
 
 	}
 
@@ -42,7 +42,12 @@
 		text-decoration: none;
 		transition: 0.3s ease;
 	}
-
+	.btn {
+		font-weight: 450;
+		font-size: vw(16);
+		line-height: 1.24;
+		text-transform: uppercase;
+	}
 	&__left{
 		position: relative;
 		display: flex;
