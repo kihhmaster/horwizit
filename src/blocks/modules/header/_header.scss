@@ -13,6 +13,7 @@
 	padding-right: vw(50);
 	align-items: center;
 	z-index: 999;
+	transition: all 0.5s;
 	@include max(md){
 		min-height: auto;
 		padding-top: vw2(30);
@@ -29,6 +30,7 @@
 		padding-right: vw3(10);
 	}
 	&.active {
+		transition: all 0.5s;
 		background: #0E1214;
 
 	}
