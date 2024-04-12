@@ -3305,6 +3305,7 @@ img{
 					left: 0;
 					color: #FFF;
 					transition: all 0.3s;
+					pointer-events: none;
 					@include max(md) {
 						top: vw2(30);
 					}

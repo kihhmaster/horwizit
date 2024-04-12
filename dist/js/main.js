@@ -530,7 +530,13 @@ swiper__WEBPACK_IMPORTED_MODULE_6__.Swiper.use([swiper__WEBPACK_IMPORTED_MODULE_
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-project-preloader").on("click", function (e) {
   e.preventDefault();
   var arrayData = this.getAttribute('data-img');
-  var href = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+  var href = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href'); // добавили
+
+  if (arrayData === "") {
+    window.location.href = href;
+    return;
+  }
+
   var arr = arrayData.split(';');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(".project-preloader__picture").each(function (index) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('background-image', 'url(' + arr[index] + ')');
@@ -550,7 +556,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-project-preloader").on("click
   });
   setTimeout(function () {
     window.location.href = href;
-  }, 6450);
+  }, 50 + jquery__WEBPACK_IMPORTED_MODULE_0___default()('.project-preloader__picture').length * 1500);
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.contacts__form__input').on('input', function (e) {
   var state = e.target.value;

@@ -43,7 +43,13 @@ $(".js-project-preloader").on("click", function(e) {
 	e.preventDefault();
 	var arrayData = this.getAttribute('data-img');
 	var href = $(this).attr('href');
+	// добавили
+	if( arrayData === "" ) {
+		window.location.href = href;
+		return;
+	}
 	var arr = arrayData.split(';');
+
 	$( ".project-preloader__picture" ).each(function(index) {
 		$( this ).css('background-image', 'url(' + arr[index] + ')');
 	});
@@ -65,7 +71,7 @@ $(".js-project-preloader").on("click", function(e) {
 	});
 	setTimeout(function() {
 		window.location.href = href;
-	}, 6450);
+	}, 50 + $('.project-preloader__picture').length * 1500 );
 })
 
 
