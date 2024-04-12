@@ -2818,12 +2818,12 @@ img{
 		padding-left: vw(30);
 
 		@include max(md) {
-			padding-left: vw2(15);
+			padding-left: vw2(30);
 			margin-bottom: vw2(20);
 		}
 		@include max(sm) {
 				margin-bottom: 0px;
-				padding-left: vw3(15);
+				padding-left: vw3(30);
 				margin-bottom: vw3(20);
 		}
 		li {
@@ -2868,33 +2868,28 @@ img{
 	}
 	a {
 		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		width: fit-content;
-		color: $colorGray;
+		display: inline-block;
+		color: $acent;
+		border-bottom: 1px solid $acent;
 		font-size: vw(14);
 		font-weight: 600;
 		line-height: vw(18);
 		letter-spacing: 0%;
 		text-align: left;
-		text-transform: uppercase;
 		text-decoration: none;
 		transition: all 0.5s;
 		cursor: pointer;
-		margin-bottom: vw(20);
 		@include max(md) {
 			font-size: vw2(14);
 			line-height: 100%;
-			margin-bottom: vw2(10);
 		}
 		@include max(sm) {
 			font-size: vw3(14);
 			line-height: 100%;
-			margin-bottom: vw3(10);
 		}
 		&:hover {
 			transition: all 0.5s;
+			color: rgba(248, 245, 239, 0.5);
 			-webkit-border-before: 2px;
 			border-bottom: 1px solid rgba(248, 245, 239, 0.5);
 		}
